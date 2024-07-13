@@ -183,7 +183,7 @@ export const Product = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
-              <NavLink to="product-detail" key={index}>
+              <NavLink to="product-detail" key={product.id}>
                 <div className="max-w-sm rounded-lg overflow-hidden">
                   {product.photos && product.photos.length > 0 ? (
                     <img
@@ -198,7 +198,7 @@ export const Product = () => {
                   )}
                   <div className="p-4">
                     <p className="font-bold text-lg mb-2">{product.name}</p>
-                    <p className="text-gray-600">${product.price}</p>
+                    <p className="text-gray-600">${product.current_price[0].NGN[0]}</p>
                   </div>
                 </div>
               </NavLink>

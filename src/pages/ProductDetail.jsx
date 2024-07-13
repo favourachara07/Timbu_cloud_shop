@@ -6,6 +6,8 @@ import { useState } from "react";
 
 export const ProductDetail = () => {
   const [num,setNum]=useState(1)
+
+  
   return (
     <section className="">
       <div className="flex justify-evenly">
