@@ -1,7 +1,11 @@
 import image from "../assets/Timbu Shop Images/flux acaddemy/fluxacademy_a_minimalist_style_kitchen_chair_in_the_style_of_au_71a96c18-bee5-42cb-a5b1-89bd353b0827.png";
 import { productDetailImage } from "./index";
+import up from "../assets/Timbu Shop Images/flux acaddemy/Arrow Up.svg"
+import down from "../assets/Timbu Shop Images/flux acaddemy/Arrow Down.svg"
+import { useState } from "react";
 
 export const ProductDetail = () => {
+  const [num,setNum]=useState(1)
   return (
     <section className="">
       <div className="flex justify-evenly">
@@ -49,7 +53,9 @@ export const ProductDetail = () => {
               type="button"
               className="text-white bg-gray-400 ml-6 font-medium rounded-lg text-sm px-4 py-1 text-center me-2 mb-2"
             >
-              1
+              {num}
+              <img onClick={()=> setNum(num+1)} src={up} alt="" />
+              <img onClick={()=> num===1 ? 1 :setNum(num-1)} src={down} alt="" />
             </button>
           </p>
 
